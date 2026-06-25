@@ -35,7 +35,7 @@
 
 .faq-question-text {
   padding-left: 40vw;
-  padding-right: 10vw;
+  padding-right: 5vw;
 }
 
 .faq-answer {
@@ -47,11 +47,11 @@
     padding 0.2s;
 
   padding-left: 45vw;
-  padding-right: 20vw;
+  padding-right: 10vw;
 
   font-family: 'Helvetica';
-  font-size: 2rem;
-  line-height: 1.7;
+  font-size: 1.7rem;
+  line-height: 1.2;
   color: var(--grey);
 }
 

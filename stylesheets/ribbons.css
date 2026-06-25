@@ -3,9 +3,11 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
-  padding-top: 6vw;
+  box-sizing: border-box;
+
+  padding: 3vw 0;
 }
 
 .ribbon-wrap {
