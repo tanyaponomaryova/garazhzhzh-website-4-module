@@ -78,15 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
         c.vy = -Math.abs(c.vy) * 0.6;
       }
 
-      /* Позиционируем элемент:
-       transform не вызывает reflow — это самый быстрый способ двигать DOM */
       c.el.style.transform = `translate(${c.x - hw}px, ${c.y - hh}px)`;
     }
 
     requestAnimationFrame(tick);
   }
 
-  /* Ресайз */
   function onResize() {
     W = section.offsetWidth;
     H = section.offsetHeight;
