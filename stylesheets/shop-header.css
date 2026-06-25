@@ -1,0 +1,71 @@
+#shop-header {
+  display: flex;
+  transform: skewX(-5deg);
+}
+
+/*  */
+
+/* #shop-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 5rem 1rem 6rem;
+  user-select: none;
+} */
+
+.letter-scene {
+  perspective: 500px;
+
+  font-family: 'Bounded';
+  font-weight: 900;
+  font-size: 15vw;
+  color: var(--grey);
+}
+
+.letter-trigger {
+  position: relative;
+  cursor: default;
+}
+
+.letter-stack {
+  position: relative;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.letter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: -0.8vw;
+
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  transform-origin: center top;
+  transform: rotate(0deg) rotateX(0deg) rotateY(0deg);
+}
+
+/* Передняя буква */
+.letter.front-letter {
+  position: relative;
+  display: block;
+  z-index: 4;
+  width: auto;
+}
+
+.letter.back-letter-1 {
+  z-index: 3;
+  color: var(--purple);
+}
+.letter.back-letter-2 {
+  z-index: 2;
+  color: var(--yellow);
+}
+.letter.back-letter-3 {
+  z-index: 1;
+  color: var(--pink);
+}

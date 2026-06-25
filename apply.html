@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="scripts/script.js"></script>
+    <script src="scripts/apply.js"></script>
+
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <header>
+      <!-- Десктоп -->
+      <nav id="desktopMenu">
+        <div>
+          <a href="index.html">Главная</a>
+          <a href="shop.html">Магазин</a>
+          <a href="events.html">События</a>
+          <a href="partner.html">Спонсор</a>
+        </div>
+        <a href="apply.html" style="opacity: 0">Участвовать</a>
+      </nav>
+
+      <!-- Бургер иконка-->
+      <div id="burger">
+        <img src="icons/burger-icon.svg" alt="" />
+      </div>
+    </header>
+
+    <!-- Мобильное меню на весь экран -->
+    <div id="mobileMenu">
+      <a href="index.html">Главная</a>
+      <div class="divider"></div>
+
+      <a href="shop.html">Магазин</a>
+      <div class="divider"></div>
+
+      <a href="events.html">События</a>
+      <div class="divider"></div>
+
+      <a href="partner.html">Спонсор</a>
+      <div class="divider"></div>
+
+      <a href="apply.html">Участвовать</a>
+    </div>
+
+    <div class="running-lines-wrap">
+      <div class="running-lines">
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-1">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-2">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-3">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-4">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-5">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-6">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-7">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+        <div class="running-line running-line-1">
+          <div class="running-line-content running-line-content-8">
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+            <h1>РЕГИСТРИРУЙСЯ</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-wrap">
+      <div class="card" id="mainCard">
+        <!-- вкладки -->
+        <div class="tabs">
+          <div class="tab active" data-tab="participant">УЧАСТНИК</div>
+          <div class="tab" data-tab="spectator">ЗРИТЕЛЬ</div>
+          <div class="tab" data-tab="volunteer">ВОЛОНТЁР</div>
+        </div>
+        <!-- форма УЧАСТНИКА -->
+        <div class="form-body active" id="tab-participant">
+          <!--  -->
+          <div class="fields-grid">
+            <div>
+              <div class="field">
+                <input type="text" placeholder="Имя" id="p-name" />
+              </div>
+              <div class="field">
+                <input type="email" placeholder="Почта" id="p-email" />
+              </div>
+            </div>
+            <!--  -->
+            <div>
+              <div class="field select-wrap">
+                <select
+                  id="p-race"
+                  onchange="this.classList.toggle('filled', this.value !== '')"
+                >
+                  <option value="">Выберите гонку</option>
+                  <option>Гонка по ползанию</option>
+                  <option>Подводная трасса</option>
+                  <option>Ветренное поле</option>
+                  <option>Марафон по Зелёному лесу</option>
+                  <option>Дрифт в Старой низине</option>
+                  <option>Гонка с переносом груза</option>
+                  <option>Подземная гонка по туннелям</option>
+                </select>
+              </div>
+              <div class="field">
+                <input
+                  type="number"
+                  placeholder="Размах крыльев (см)"
+                  id="p-wing1"
+                />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Номер команды" id="p-team" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="checkbox-row">
+            <input type="checkbox" id="participant-agree" />
+            <label for="participant-agree">
+              Я согласен с <a href="">Правилами BUG RUSH 2026</a>
+            </label>
+          </div>
+          <button class="btn" data-type="participant">
+            ЗАРЕГИСТРИРОВАТЬСЯ
+          </button>
+        </div>
+        <!-- форма ЗРИТЕЛЯ -->
+        <div class="form-body" id="tab-spectator">
+          <div class="fields-grid">
+            <div>
+              <div class="field">
+                <input type="text" placeholder="Имя" id="s-name" />
+              </div>
+              <div class="field">
+                <input type="email" placeholder="Почта" id="s-email" />
+              </div>
+            </div>
+            <div>
+              <div class="field select-wrap">
+                <select
+                  id="s-ticket"
+                  onchange="this.classList.toggle('filled', this.value !== '')"
+                >
+                  <option value="">Тип билета</option>
+                  <option>Трибуна A (VIP)</option>
+                  <option>Трибуна B</option>
+                  <option>Онлайн-трансляция</option>
+                </select>
+              </div>
+              <div class="field">
+                <input
+                  type="number"
+                  placeholder="Количество билетов"
+                  id="s-count"
+                  min="1"
+                  max="10"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="spectator-agree" />
+            <label for="spectator-agree"
+              >Я согласен с <a href="#">Правилами BUG RUSH 2026</a></label
+            >
+          </div>
+          <button class="btn" data-type="spectator">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </div>
+        <!-- форма ВОЛОНТЁРА -->
+        <div class="form-body" id="tab-volunteer">
+          <div class="fields-grid">
+            <div>
+              <div class="field">
+                <input type="text" placeholder="Имя" id="v-name" />
+              </div>
+              <div class="field">
+                <input type="email" placeholder="Почта" id="v-email" />
+              </div>
+              <div class="field">
+                <input type="tel" placeholder="Телефон" id="v-phone" />
+              </div>
+            </div>
+            <div>
+              <div class="field select-wrap">
+                <select
+                  id="v-role"
+                  onchange="this.classList.toggle('filled', this.value !== '')"
+                >
+                  <option value="">Желаемая роль</option>
+                  <option>Помощь гостям в навигации</option>
+                  <option>Пресс-служба</option>
+                  <option>Медицинская поддержка</option>
+                </select>
+              </div>
+              <div class="field">
+                <input type="text" placeholder="Опыт волонтёрства" id="v-exp" />
+              </div>
+            </div>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="volunteer-agree" />
+            <label for="volunteer-agree"
+              >Я согласен с <a href="#">Правилами BUG RUSH 2026</a></label
+            >
+          </div>
+          <button class="btn" data-type="volunteer">ПОДАТЬ ЗАЯВКУ</button>
+        </div>
+
+        <!-- ЗАЯВКА ЗАПОЛНЕНА -->
+        <div class="success-state" id="successState">
+          <div class="success-icon">
+            <img src="icons/success-icon.svg" alt="" />
+          </div>
+
+          <div class="success-title" id="successTitle">Заявка принята!</div>
+          <div class="success-sub" id="successSub">
+            Мы получили вашу заявку и свяжемся с вами по электронной почте в
+            течение 2–3 рабочих дней.
+          </div>
+          <button class="reset-btn">Подать ещё одну заявку</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

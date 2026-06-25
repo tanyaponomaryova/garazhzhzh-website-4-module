@@ -1,0 +1,90 @@
+/* Контейнер сцены — здесь живёт карусель */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Обёртка карусели — все плашки позиционируются внутри неё */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+/* Базовые стили плашки — общие для всех */
+.slab {
+  position: absolute;
+  left: -100vw;
+  right: -100vw;
+  height: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.slab h1 {
+  font-family: 'Bounded';
+  font-weight: 900;
+  /* font-size: 13vw; */
+  letter-spacing: -7%;
+  text-transform: uppercase;
+  user-select: none;
+  padding: 0 1000vw;
+  transform: skewX(-5deg);
+}
+
+.slab-1 {
+  background: var(--purple);
+  color: var(--white);
+}
+.slab-2 {
+  background: var(--grey);
+  color: var(--purple);
+}
+.slab-3 {
+  background: var(--pink);
+  color: var(--yellow);
+}
+.slab-4 {
+  background: var(--grey);
+  color: var(--purple);
+}
+.slab-5 {
+  background: var(--yellow);
+  color: var(--pink);
+}
+.slab-6 {
+  background: var(--purple);
+  color: var(--white);
+}
+.slab-7 {
+  background: var(--grey);
+  color: var(--purple);
+}
+.slab-8 {
+  background: var(--yellow);
+  color: var(--pink);
+}
+.slab-9 {
+  background: var(--yellow);
+  color: var(--pink);
+}
+.slab-10 {
+  background: var(--purple);
+  color: var(--white);
+}
+.slab-11 {
+  background: var(--grey);
+  color: var(--purple);
+}
+.slab-12 {
+  background: var(--yellow);
+  color: var(--pink);
+}

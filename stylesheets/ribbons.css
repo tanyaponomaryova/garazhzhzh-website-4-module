@@ -1,0 +1,77 @@
+.ribbons-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  overflow-x: hidden;
+
+  padding-top: 6vw;
+}
+
+.ribbon-wrap {
+  width: 120%;
+  margin-left: -10%;
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  width: max-content; /* растягивается по контенту */
+  animation: scroll 18s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  } /* -50% = длина одного «прохода» */
+}
+
+.ribbon-content:hover {
+  animation-play-state: paused;
+}
+
+.ribbon-content h1 {
+  font-family: 'Bounded';
+  font-weight: 900;
+  font-size: 10vw;
+  transition: transform 0.3s ease;
+}
+
+.ribbon-content h2 {
+  font-family: 'Bounded';
+  font-weight: 800;
+  font-size: 6vw;
+  transition: transform 0.3s ease;
+}
+
+.ribbon-content p {
+  font-family: 'Helvetica';
+  font-weight: 500;
+  font-size: 2vw;
+  transition: transform 0.3s ease;
+}
+
+/* цвета */
+.ribbon-wrap-1 {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.ribbon-wrap-2 {
+  background-color: var(--yellow);
+  color: var(--pink);
+}
+
+.ribbon-wrap-3 {
+  background-color: var(--white);
+  color: var(--grey);
+}
+
+.ribbon-wrap-4 {
+  background-color: var(--grey);
+  color: var(--yellow);
+}

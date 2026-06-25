@@ -1,0 +1,280 @@
+* {
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+}
+
+/* цвета */
+:root {
+  --white: #f0f0f0;
+  --grey: #434343;
+  --light-grey: #c7c7c7;
+  --pink: #ed32b6;
+  --yellow: #f0ff16;
+  --green: #d2e301;
+  --light-green: #efff3f;
+
+  --purple: #9c72ea;
+}
+
+body {
+  font-family:
+    'Helvetica',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    sans-serif;
+
+  background-color: var(--purple);
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: clamp(20px, 10vh, 100px);
+  background: var(--purple);
+  padding: 1rem 1vw;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*  #region DESKTOP MENU */
+#desktopMenu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15vw;
+  align-items: center;
+}
+
+#desktopMenu a {
+  color: var(--white);
+  font-family: 'Bounded';
+
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+#desktopMenu > :first-child {
+  display: flex;
+  gap: 3rem;
+}
+
+#desktopMenu > :last-child {
+  padding: 1rem 3rem;
+  color: var(--purple);
+  position: relative;
+
+  z-index: 10; /* ПЛАШКИ ВЫШЕ */
+}
+
+#desktopMenu > :last-child::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  border-radius: 5px;
+  background-color: var(--white);
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+
+/*  #endregion DESKTOP MENU */
+
+/* #region Бургер Меню */
+#burger {
+  width: 100%;
+  background-color: var(--purple);
+  display: none;
+  cursor: pointer;
+  top: 0;
+  z-index: 2000;
+}
+
+#burger img {
+  width: 5rem;
+  padding: 0.5rem 1rem;
+}
+
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--purple);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: end;
+  transition: 0.4s ease;
+  z-index: 100;
+
+  font-family: 'Bounded';
+  font-size: 3rem;
+  box-sizing: border-box;
+  padding: 1vw;
+  padding-bottom: 6rem;
+}
+
+#mobileMenu.active {
+  display: none;
+  left: 0;
+}
+
+#mobileMenu a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 28px;
+}
+
+/* #endregion Бургер Меню */
+
+/* #region 404*/
+#error {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 100px);
+  padding-left: 1vw;
+  font-family: 'Bounded';
+}
+
+#error h1 {
+  font-size: clamp(20px, 10vw, 100px);
+  font-weight: 700;
+  color: var(--white);
+}
+
+#error a {
+  color: var(--grey);
+  font-size: clamp(20px, 5vw, 50px);
+}
+
+/* #endregion */
+
+/* #region Заголовок и текст под главной анимацией */
+
+.subheader-section {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  padding: 3vw 1vw;
+}
+
+.subheader-section :first-child {
+  /* width: 40vw; */
+  display: flex;
+  gap: 10rem;
+}
+
+.subheader-section > :nth-child(2) {
+  text-align: right;
+}
+
+.subheader-section .subheader {
+  font-family: 'Bounded';
+  font-weight: 800;
+  font-size: clamp(2px, 3vw, 40px);
+  line-height: 120%;
+}
+
+/* #endregion */
+
+.rubric {
+  font-family: 'Helvetica';
+  color: var(--white);
+
+  padding: 0 1vw;
+  padding-top: 6vw;
+}
+
+.rubric h1 {
+  position: relative;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  padding-bottom: 3vw;
+}
+
+.rubric p,
+.subheader-section p {
+  font-family: 'Helvetica';
+  font-size: 1.7rem;
+  width: clamp(6vw, 29rem, 25vw);
+}
+
+.rubric h1::before,
+footer::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* расстояние от линии до заголовка */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+}
+
+/* #region ФУТЕР */
+footer {
+  margin-top: 10vw;
+  position: relative;
+}
+
+#footerMenu {
+  width: 100%;
+  display: flex;
+  gap: 10rem;
+
+  padding-left: 1vw;
+  padding-top: 5vw;
+}
+
+#footerMenu a {
+  color: var(--white);
+  font-family: 'Helvetica';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+#big-text-wrap {
+  width: 100%;
+  /* height: 13vw; */
+  overflow: hidden;
+  padding-top: 6vw;
+  opacity: 0.2;
+
+  display: flex;
+  gap: 4vw;
+  font-family: 'Bounded';
+  font-weight: 900;
+  color: var(--grey);
+  letter-spacing: -7%;
+  line-height: 70%;
+  font-size: 17vw;
+}
+
+#big-text-wrap span {
+  transform: skewX(-10deg);
+  margin-left: -1vw;
+}
+/* #endregion  */

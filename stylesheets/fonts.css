@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Bounded';
+  src: url('../fonts/Bounded-Variable.ttf') format('truetype');
+  font-weight: 200 900; /* диапазон весов */
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/HelveticaRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/HelveticaMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

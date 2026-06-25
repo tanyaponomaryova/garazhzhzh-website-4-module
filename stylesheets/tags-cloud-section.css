@@ -1,0 +1,93 @@
+#flying-tags-section {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  /* overflow: hidden; */
+
+  display: flex;
+  justify-content: center;
+
+  margin: 8vw 1vw 0 1vw;
+}
+
+/* ─── Плашка ─────────────────────────────────────── */
+.tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 1.7rem 3rem;
+  color: var(--white);
+  font-family: 'Helvetica';
+  font-size: 1.7rem;
+  font-weight: 400;
+  white-space: nowrap;
+
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+
+  z-index: 10; /* ПЛАШКИ ВЫШЕ */
+}
+
+.tag::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  border-radius: 5px;
+
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+
+.tag-green {
+  color: var(--grey);
+}
+
+.tag-pink,
+.tag-grey {
+  color: var(--white);
+}
+
+.tag-green::before {
+  background-color: var(--green);
+}
+
+.tag-pink::before {
+  background-color: var(--pink);
+}
+
+.tag-grey::before {
+  background-color: var(--grey);
+}
+
+#participate-button {
+  background: none;
+  border: none;
+  font-family: 'Bounded';
+  font-weight: 900;
+  color: var(--white);
+  font-size: 11vw;
+  line-height: 94%;
+  letter-spacing: -2%;
+
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: transform 0.2s ease;
+
+  z-index: 1; /* КНОПКА НИЖЕ */
+}
+
+#participate-button:hover {
+  transform: skewX(-5deg);
+}
+
+#participate-button img {
+  height: 22vw;
+}
