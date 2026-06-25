@@ -28,6 +28,7 @@
 
   .subheader-section :first-child {
     flex-direction: column;
+    width: 100%;
     gap: 2rem;
   }
 

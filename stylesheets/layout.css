@@ -201,7 +201,7 @@ header {
   color: var(--white);
 
   padding: 0 1vw;
-  padding-top: 6vw;
+  padding-top: 6rem;
 }
 
 .rubric h1 {
